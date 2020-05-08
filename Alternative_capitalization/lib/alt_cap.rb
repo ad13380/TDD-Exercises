@@ -5,3 +5,5 @@ For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for mor
 
 The input will be a lowercase string with no spaces.
 =end
+def capitalize
+end
