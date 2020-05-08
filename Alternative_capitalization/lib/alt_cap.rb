@@ -5,8 +5,6 @@ For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for mor
 
 The input will be a lowercase string with no spaces.
 =end
-def capitalize(letter)
-  return [letter.upcase,letter]
+def capitalize(word)
+  p [word[0].upcase + word[1..-1], word[0].downcase + word[1..-1].upcase]
 end
-
-#p capitalize('a')
