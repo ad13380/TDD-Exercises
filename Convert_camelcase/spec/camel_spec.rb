@@ -13,13 +13,17 @@ describe '#to_camel_case' do
     expect(camel_object).to raise_error(ArgumentError)
   end
 
-  it "returns 'aB' when given 'ab'" do
-    expect(to_camel_case("ab")).to eq "aB"
-  end
-
   ["a-b","a_b"].each do |arg|
     it "removes dashes and underscores between words'" do
       expect(to_camel_case(arg)).to eq "aB"
     end
+  end
+
+  it "returns 'theStealthWarrior' when given 'the-stealth-warrior'" do
+    expect(to_camel_case("the-stealth-warrior")).to eq "theStealthWarrior"
+  end
+
+  it "returns 'theStealthWarrior' when given 'the-stealth-warrior'" do
+    expect(to_camel_case("The_Stealth_Warrior")).to eq "TheStealthWarrior"
   end
 end

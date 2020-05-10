@@ -10,5 +10,5 @@ to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
 =end
 
 def to_camel_case(str)
-  to_return = str.gsub(/[-_]/,"").split("").map.with_index{ |word,i| i > 0 ? word.upcase : word }.join
+  to_return = str.gsub(/[-_]/," ").split.map.with_index{ |word,i| i > 0 ? word.capitalize() : word }.join
 end
