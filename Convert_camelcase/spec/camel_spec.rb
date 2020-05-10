@@ -13,4 +13,7 @@ describe '#to_camel_case' do
     expect(camel_object).to raise_error(ArgumentError)
   end
 
+  it "returns 'aB' when given 'ab'" do
+    expect(to_camel_case("ab")).to eq "aB"
+  end
 end

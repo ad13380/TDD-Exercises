@@ -9,6 +9,9 @@ to_camel_case("the-stealth-warrior") # returns "theStealthWarrior"
 to_camel_case("The_Stealth_Warrior") # returns "TheStealthWarrior"
 =end
 
-def to_camel_case(arg)
-  
+def to_camel_case(str)
+  return str[0...-1] + str[-1].upcase
+
 end
+
+p to_camel_case("ab")
