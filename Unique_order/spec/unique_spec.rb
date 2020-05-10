@@ -27,5 +27,9 @@ describe '#unique_in_order' do
     expect(unique_in_order([1,2,2,3,3])).to eq [1,2,3]
   end
 
+  it "returns [1,2,true,false,'a','b','hello','test'] when given [1,1,2,true,true,false,false,'a','b','hello','hello','test']" do
+    expect(unique_in_order([1,1,2,true,true,false,false,'a','b','hello','hello','test'])).to eq [1,2,true,false,'a','b','hello','test']
+  end
+
 
 end
