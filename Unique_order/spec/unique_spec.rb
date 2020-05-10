@@ -7,8 +7,8 @@ describe '#unique_in_order' do
     expect(unique_object).to raise_error(ArgumentError)
   end
 
-  it "returns '['A','B','C']' when given 'ABC'" do
-    expect(unique_object).to raise_error(ArgumentError)
+  it "returns ['A','B','C'] when given 'ABC'" do
+    expect(unique_in_order('ABC')).to eq ['A','B','C']
   end
 
 

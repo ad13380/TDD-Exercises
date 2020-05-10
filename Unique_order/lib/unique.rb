@@ -10,6 +10,6 @@ unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 unique_in_order([1,2,2,3,3])       == [1,2,3]
 =end
 
-def unique_in_order()
-  
+def unique_in_order(str)
+  str.chars
 end
