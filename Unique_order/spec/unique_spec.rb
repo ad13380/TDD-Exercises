@@ -11,6 +11,9 @@ describe '#unique_in_order' do
     expect(unique_in_order('ABC')).to eq ['A','B','C']
   end
 
+  it "returns ['A','B','C'] when given 'AABC'" do
+    expect(unique_in_order('AABC')).to eq ['A','B','C']
+  end
 
 
 end

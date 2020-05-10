@@ -11,5 +11,7 @@ unique_in_order([1,2,2,3,3])       == [1,2,3]
 =end
 
 def unique_in_order(str)
-  str.chars
+  to_return = []
+  str.chars.each_cons(2){ |a,b| to_return << a if a != b }
+  to_return << str[-1]
 end
