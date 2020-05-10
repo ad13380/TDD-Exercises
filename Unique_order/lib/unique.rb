@@ -10,8 +10,9 @@ unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 unique_in_order([1,2,2,3,3])       == [1,2,3]
 =end
 
-def unique_in_order(str)
+def unique_in_order(arg)
   to_return = []
-  str.chars.each_cons(2){ |a,b| to_return << a if a != b }
-  to_return << str[-1]
+  arg.kind_of?(Array) ? format_array = arg : format_array = arg.chars
+  format_array.each_cons(2){ |a,b| to_return << a if a != b }
+  to_return << format_array[-1]
 end

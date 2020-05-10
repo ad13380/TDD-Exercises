@@ -23,5 +23,9 @@ describe '#unique_in_order' do
     expect(unique_in_order('ABBCcAD')).to eq ['A', 'B', 'C', 'c', 'A', 'D']
   end
 
+  it "returns [1,2,3] when given [1,2,2,3,3]" do
+    expect(unique_in_order([1,2,2,3,3])).to eq [1,2,3]
+  end
+
 
 end
