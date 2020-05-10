@@ -16,4 +16,10 @@ describe '#to_camel_case' do
   it "returns 'aB' when given 'ab'" do
     expect(to_camel_case("ab")).to eq "aB"
   end
+
+  ["a-b","a_b"].each do |arg|
+    it "removes dashes and underscores between words'" do
+      expect(to_camel_case(arg)).to eq "aB"
+    end
+  end
 end
